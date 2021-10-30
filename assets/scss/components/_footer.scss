@@ -1,0 +1,14 @@
+footer {
+  padding: $spacing-huge 10%;
+  background-color: $gray-dark;
+  color: white;
+
+  i {
+    color: white;
+    margin: 0 $spacing-small;
+  }
+
+  .column table {
+    margin: 0;
+  }
+}

@@ -1,0 +1,24 @@
+table {
+  margin: $spacing-medium 0;
+  border-collapse: collapse;
+  text-align: left;
+
+  td, th {
+    padding: 0 $spacing-medium $spacing-medium 0;
+  }
+  &.table--striped {
+    tr:nth-child(odd) {
+      background-color: $gray;
+    }
+  }
+
+  &.compressed td, th {
+    padding: 0 $spacing-small $spacing-small 0;
+  }
+
+  &.mobile--compressed {
+    @media (max-width: $screensize-small) {
+      padding: 0;
+    }
+  }
+}

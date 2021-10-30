@@ -1,0 +1,24 @@
+.flag-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.flag-left {
+  float: left;
+  width: 50%;
+  margin-right: $spacing-small;
+}
+.flag-right {
+  float: right;
+  width: 50%;
+  margin-left: $spacing-small;
+}
+
+@media (max-width: 1000px) {
+  .flag-left, .flag-right {
+    width: 100%;
+  }
+  .flag-container {
+    flex-direction: column;
+  }
+}

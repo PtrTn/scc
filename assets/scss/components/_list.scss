@@ -1,0 +1,7 @@
+ul.list--basic {
+  list-style: none;
+}
+
+ul.list--indented, ol.list--indented {
+  margin-left: $spacing-medium;
+}

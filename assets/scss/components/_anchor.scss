@@ -1,0 +1,19 @@
+a {
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.vertical-aligned {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    &.vertical-aligned {
+      justify-content: center;
+    }
+  }
+}

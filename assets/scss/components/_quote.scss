@@ -1,0 +1,9 @@
+.quote-container {
+  blockquote {
+    font-style: italic;
+    margin-bottom: $spacing-small;
+  }
+  .author {
+    margin: 0 0 0 $spacing-medium;
+  }
+}
