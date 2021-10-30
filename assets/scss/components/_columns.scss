@@ -1,0 +1,16 @@
+.column-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (max-width: 1200px) {
+  .column-container {
+    flex-direction: column;
+  }
+
+  .column:not(:first-of-type) {
+    padding-top: $spacing-huge;
+  }
+}

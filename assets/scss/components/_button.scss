@@ -1,0 +1,51 @@
+.button {
+  padding: $spacing-small $spacing-medium;
+  font-size: 1.3em;
+  text-decoration: none;
+  margin: 0 $spacing-medium;
+  border: none;
+  @include border-radius(2px);
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.button--white {
+    background-color: white;
+    color: $black;
+    border: 3px solid $black;
+  }
+  &.button--red {
+    background-color: $red;
+    color: white;
+    border: 3px solid $red;
+  }
+  &.button--black {
+    background-color: $black;
+    color: white;
+    border: 3px solid $black;
+  }
+}
+.button-container {
+  margin-top: $spacing-huge;
+
+  &.button-container--multiple {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &.button-container--centered {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .button-container.button-container--multiple {
+    display: block;
+
+    a.button:not(:first-of-type) {
+      margin-top: $spacing-medium;
+    }
+  }
+}

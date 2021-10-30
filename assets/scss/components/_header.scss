@@ -1,0 +1,14 @@
+header {
+  background-image: url('../../images/plates.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 200px;
+}
+
+@media (max-width: 1000px) {
+  header {
+    height: 300px;
+  }
+}

@@ -1,0 +1,52 @@
+.sub-item {
+  display: none;
+
+  &.sub-item--active {
+    display: block;
+  }
+}
+
+nav.menu--sub {
+  background-color: $gray-dark;
+  color: white;
+
+  ul {
+    width: 100%;
+    list-style: none;
+    max-width: 800px;
+    align-items: stretch;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+
+    li {
+      width: calc(100% / 2);
+      display: inline-block;
+      padding: $spacing-medium 0;
+      font-size: 1.7em;
+
+      &:hover {
+        background-color: $black;
+        cursor: pointer;
+
+        &.active:before {
+          border-color: $black transparent transparent;
+        }
+      }
+      &.active {
+        position: relative;
+
+        &:before {
+          border-color: $gray-dark transparent transparent;
+          border-width: 15px 15px 0;
+          border-style: solid;
+          position: absolute;
+          bottom: -15px;
+          left: calc(50% - 15px);
+          content: "";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "phv",
+  "version": "1.0.0",
+  "description": "Symfony backend used for creating, reading, updating and deleting data, which will be available via an API",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "hover.css": "^2.0",
+    "jquery": "^3.1",
+    "pickadate": "^3.5",
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-cssjoin": "^0.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.5.1",
+    "merge-stream": "^1.0.0",
+    "natives": "^1.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baabah/PHV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baabah/PHV/issues"
+  },
+  "homepage": "https://github.com/Baabah/PHV#readme"
+}

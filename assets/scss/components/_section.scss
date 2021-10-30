@@ -1,0 +1,39 @@
+section {
+  padding: $spacing-massive 5%;
+  margin: 0 15%;
+  border-top: 1px solid $gray;
+  overflow: auto;
+
+  &.wide {
+    @media (max-width: $screensize-medium) {
+      margin: 0 5%;
+    }
+  }
+
+  &.section--sub {
+    padding: $spacing-large 5%;
+  }
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  &.section--center {
+    .section-title, p.intro {
+      text-align: center;
+    }
+  }
+
+  .section-title, p.intro {
+    margin-bottom: $spacing-medium;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    text-align: center;
+  }
+}
