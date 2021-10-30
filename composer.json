@@ -1,4 +1,6 @@
 {
+    "name": "ptrtn/sccpowerhouse",
+    "description": "Website for the powerlifting club",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
