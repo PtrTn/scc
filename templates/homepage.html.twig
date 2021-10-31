@@ -1,1 +1,48 @@
-<h1>Welcome home</h1>
+{% set activePage = '/' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section class="section--center">
+        <p class="intro">— Wat is SCC Powerhouse? —</p>
+        <h2 class="section-title">Krachtsport vereniging in Zeeland</h2>
+        <p>
+            SCC Powerhouse, voorheen bekend als Powerhouse Middelburg, is een krachtsport vereniging in Oost-Souburg waarbij getraind wordt in onze eigen trainingsruimte.
+            SCC Powerhouse richt zich vooral op powerliften, onze leden doen al sinds 2014 mee aan nationale en internationale competities. Naast Powerlifting kan er ook voor strongman getraind worden en bijna elke andere soort krachttraining.
+            Ieder die zichzelf sterk wilt maken door middel van krachttraining is bij ons welkom.
+        </p>
+    </section>
+    <section class="section--center flag-container">
+        <div class="flag-left">
+            <h2 class="section-title">Aanpak</h2>
+            <p class="intro">
+                Wij bieden sporters een omgeving waarin de focus op het verbeteren van prestaties ligt.
+                Doordat onze leden dezelfde ambitie delen - namelijk sterker worden -, onstaat er een motiverende sfeer, waar doelgericht getraind kan worden.
+                Op dit gebied onderscheiden wij onszelf van de 'normale' sportschool, die meestal niet veel meer biedt dan traingsmateriaal. Bij SCC Powerhouse wordt goed gelet op de juiste uitvoering, waarbij de leden elkaar helpen waar nodig.
+            </p>
+        </div>
+        <img class="flag-right" src="{{ asset('images/mentaliteit.jpg') }}">
+    </section>
+    <section class="section--center">
+        <div>
+            <h2 class="section-title">Materiaal</h2>
+            <p class="intro">
+                Wil je veel gewicht verzetten? Dat is bij ons geen probleem!
+                We beschikken over meerdere powercages, een set free stands en een deadlift platform. Laatst is er een IPF approved ER Equipment wedstrijd rack aan toegevoegd!
+                Verder kan er gebruik gemaakt worden van een aantal verschillende barbells, dumbbells, zo'n 1000kg aan gewicht en nog veel meer.
+            </p>
+        </div>
+        <div class="slick-container">
+            <img src="{{ asset('images/plankier.jpg') }}">
+        </div>
+    </section>
+    <section class="section--center">
+        <p class="intro">— Wat voor jou? —</p>
+        <h2 class="section-title">Gratis proeftraining</h2>
+        <p>
+            Benieuwd hoe het er bij ons aan toe gaat? Kom eens een keer langs en <a href="/proeftraining">ervaar het zelf.</a>
+        </p>
+        <div class="button-container button-container--centered button-container--multiple">
+            <a href="/contact" class="button button--white hvr-float-shadow">Ik wil meer weten</a>
+            <a href="/proeftraining" class="button button--red hvr-float-shadow">Ik wil gratis proeftrainen</a>
+        </div>
+    </section>
+{% endblock %}
