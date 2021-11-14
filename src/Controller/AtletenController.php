@@ -7,13 +7,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-final class HomeController extends AbstractController
+final class AtletenController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/atleten")
      */
     public function number(): Response
     {
-        return $this->render('homepage.html.twig');
+        return $this->render('atleten.html.twig');
     }
 }
