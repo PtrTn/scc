@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\CoachingRequest;
 use App\FormType\CoachingRequestFormType;
+use App\Repository\CoachingRequestRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class CoachingController extends AbstractController
 {
+    /** @var CoachingRequestRepository */
+    private $repository;
+
+    public function __construct(CoachingRequestRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * @Route("/coaching")
      */
@@ -25,7 +34,9 @@ final class CoachingController extends AbstractController
             return $this->render('coaching.html.twig', ['form' => $form->createView()]);
         }
 
-        // Todo, submission logic.
+        $this->repository->save($entity);
+
+        // Todo, email logic.
 
         return $this->render('coaching.html.twig');
     }
