@@ -1,0 +1,42 @@
+{% set activePage = 'coaching' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% if form is defined %}
+        <section>
+            <h3>Coaching</h3>
+
+            <img src="{{ asset('images/coaching/coaching.jpg') }}">
+            <p class="margin-top">
+               Bij SCC Powerhouse vinden wij dat coaching betaalbaar en persoonlijk dient te zijn. Wij willen graag mensen helpen een hoger niveau te bereiken op het gebied van kracht en prestaties, wat vaak weer resulteert in meer zelfvertrouwen en persoonlijke ontwikkeling. De coaching is vooral gericht op wedstrijdatleten binnen het powerlifting, maar ook mensen die deze ambities niet per se delen zijn natuurlijk van harte welkom.
+            </p>
+
+            <ul class="margin-top">
+                <li>Je wordt begeleid door (internationaal) ervaren lifters en coaches, recordhouders en nationaal kampioenen
+                </li>
+                <li>Één keer per week kan je gratis bij SCC Powerhouse komen trainen.</li>
+                <li>Je krijgt wekelijks je gepersonaliseerde schema door gestuurd</li>
+                <li>Contact via e-mail en whatsapp mogelijk</li>
+                <li>Video’s opsturen ter beoordeling is mogelijk</li>
+                <li>Op de wedstrijden zelf word je begeleid door één van onze coaches wanneer mogelijk</li>
+                <li>High fives na elke PR</li>
+                <li>Kosten : 40 euro per maand</li>
+            </ul>
+
+            <p class="margin-top">Benieuwd naar de resultaten van onze coaching? Kijk bij de
+                <a href="/atleten">atleten pagina </a>
+            </p>
+        </section>
+        <section class="section--sub">
+            <h3>Iets voor jou?</h3>
+            <p class="intro">
+                Benieuwd wat onze coaching voor jou kan betekenen?
+                Via het onderstaande formulier kun je vrijblijvend in contact komen.
+            </p>
+            {{ form(form) }}
+        </section>
+    {% else %}
+        <section>
+            <p>Uw coaching aanvraag is in goede orde ontvangen. U kunt binnenkort een reactie verwachten.</p>
+        </section>
+    {% endif %}
+{% endblock %}
