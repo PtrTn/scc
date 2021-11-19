@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class AtletenController extends AbstractController
 {
-    /**
-     * @Route("/atleten")
-     */
+    #[Route('/atleten')]
     public function showAtletenPage(): Response
     {
         return $this->render('atleten.html.twig');

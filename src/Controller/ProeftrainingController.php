@@ -21,9 +21,7 @@ final class ProeftrainingController extends AbstractController
         $this->repository = $repository;
     }
 
-    /**
-     * @Route("/proeftraining")
-     */
+    #[Route('/proeftraining')]
     public function showProeftrainingPage(Request $request): Response
     {
         $entity = new ParticipationRequest();

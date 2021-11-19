@@ -21,9 +21,7 @@ final class CoachingController extends AbstractController
         $this->repository = $repository;
     }
 
-    /**
-     * @Route("/coaching")
-     */
+    #[Route('/coaching')]
     public function showCoachingPage(Request $request): Response
     {
         $entity = new CoachingRequest();

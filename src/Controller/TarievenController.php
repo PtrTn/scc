@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class TarievenController extends AbstractController
 {
-    /**
-     * @Route("/tarieven")
-     */
+    #[Route('/tarieven')]
     public function showTarievenPage(): Response
     {
         return $this->render('tarieven.html.twig');

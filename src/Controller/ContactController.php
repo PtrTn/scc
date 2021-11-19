@@ -21,9 +21,7 @@ final class ContactController extends AbstractController
         $this->repository = $repository;
     }
 
-    /**
-     * @Route("/contact")
-     */
+    #[Route('/contact')]
     public function showContactPage(Request $request): Response
     {
         $entity = new ContactMessage();

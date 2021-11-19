@@ -18,17 +18,13 @@ final class ArtikelenController extends AbstractController
         'deload' => 'deload.html.twig',
     ];
 
-    /**
-     * @Route("/artikelen")
-     */
+    #[Route('/artikelen/')]
     public function articleListAction(Request $request): Response
     {
         return $this->render('artikelen/list.html.twig');
     }
 
-    /**
-     * @Route("/artikelen/{slug}", name="article_details")
-     */
+    #[Route('/artikelen/{slug}', name: 'article_details')]
     public function articlePostAction(Request $request, string $slug): Response
     {
         $blogPost = $this->blogPosts[$slug] ?? null;
