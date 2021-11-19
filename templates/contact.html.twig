@@ -1,0 +1,19 @@
+{% set activePage = 'contact' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section>
+        <h2>Contact</h2>
+        {% if form is defined %}
+            <p class="intro">
+                Heb je een vraag, suggestie of ben je benieuwd wat wij voor je kunnen betekenen?
+                Via het onderstaande formulier kun je gemakkelijk in contact komen met ons.
+            </p>
+            <p class="margin-bottom">
+                Ons adres is Buteuxstraat 10, 4388 CW Oost-Souburg.
+            </p>
+            {{ form(form) }}
+        {% else %}
+            <p>Uw contact aanvraag is in goede orde ontvangen. U kunt binnenkort een reactie verwachten.</p>
+        {% endif %}
+    </section>
+{% endblock %}

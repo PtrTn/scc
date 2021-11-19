@@ -17,7 +17,6 @@ final class BlogController extends AbstractController
         'deload' => 'deload.html.twig',
     ];
 
-
     /**
      * @Route("/artikelen")
      */
