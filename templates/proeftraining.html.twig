@@ -1,0 +1,31 @@
+{% set activePage = 'proeftraining' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section>
+        <h2>Gratis proeftraining</h2>
+        {% if form is defined %}
+            <p class="intro">
+                Wil je een gratis en vrijblijvende proeftraining aanvragen? Dat kan via het onderstaande formulier.
+                Ideaal om een keertje de sfeer te proeven en kennis te maken.
+            </p>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_row(form.firstName) }}
+            {{ form_row(form.lastName) }}
+            {{ form_row(form.participationDate) }}
+            <div class="form-group">
+                <label class="control-label">Tijd</label>
+                <input id="participation_participationTime" class="form-control" type="text" disabled="disabled">
+            </div>
+            {{ form_row(form.phoneNumber) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.message) }}
+
+            {{ form_row(form.submit) }}
+            {{ form_end(form) }}
+        {% else %}
+            <p>Uw aanvraag voor een gratis proeftraining is in goede orde ontvangen. Wij zullen ter bevestiging vooraf contact met u opnemen.</p>
+        {% endif %}
+    </section>
+{% endblock %}

@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class BlogController extends AbstractController
+final class ArtikelenController extends AbstractController
 {
     private $blogPosts = [
         'high-bar-vs-low-bar-squat' => 'high-bar-low-bar.html.twig',
