@@ -1,0 +1,47 @@
+{% set activePage = 'artikelen' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section class="section--center">
+        <div>
+            <h2 class="section-title">High bar squat vs low bar squat</h2>
+            <p class="intro">— Geschreven op 11 mei 2021 door Tymen —</p>
+            <p>De squat is een oefening die gepopulariseerd werd tijdens de fitnessrevolutie van de jaren zestig en zeventig van de 20e eeuw. De squat is snel uitgegroeid tot misschien wel dé basisoefening van elke zichzelf serieus nemende krachtatleet. Als onderdeel van het powerlifting is het daarnaast een absolute graadmeter van pure kracht geworden.</p>
+            <div class="centered margin-top">
+                <a href="{{  path('article_details', {'slug': 'high-bar-vs-low-bar-squat' }) }}">Lees verder</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section--center">
+        <div>
+            <h2 class="section-title">De halter</h2>
+            <p class="intro">— Geschreven op 11 mei 2021 door Tymen —</p>
+            <p>In dit korte artikel wordt beschreven hoe je de kwaliteit van een halter kunt bepalen en voor welke vragen je komt te staan wanneer je zelf een halter zou willen aanschaffen. Het stuk begint met een omschrijving van de kenmerken van een powerlifting halter en gaat daarna dieper in op de verschillende kenmerken die de kwaliteit van een halter bepalen. In dit artikel worden géén specialty bars behandeld.</p>
+            <div class="centered margin-top">
+                <a href="{{  path('article_details', {'slug': 'de-halter' }) }}">Lees verder</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section--center">
+        <div>
+            <h2 class="section-title">Programming voor powerlifting</h2>
+            <p class="intro">— Geschreven op 13 april 2021 door Tymen —</p>
+            <p>Krachtsport in het algemeen is een veel beoefende sport, maar we zien vaak dat binnen de beoefening van die prachtige krachtsport - powerlifting, strongman, gewichtheffen, crossfit, noem maar op - programmering toch nog een ondergeschoven kindje is.</p>
+            <div class="centered margin-top">
+                <a href="{{  path('article_details', {'slug': 'programming-voor-powerlifting' }) }}">Lees verder</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section--center">
+        <div>
+            <h2 class="section-title">Deload</h2>
+            <p class="intro">— Geschreven op 10 december 2020 door Tymen —</p>
+            <p>Het woord ‘deload’ is wat lastig te vertalen naar het Nederlands. Het betekent letterlijk zoiets als ‘aflading’. Binnen de krachtsport heeft het de betekenis van een korte periode (meestal maximaal een week) waarin op lagere intensiteit en/of lager volume wordt getraind dan in de voorgaande en daaropvolgende weken. Vrijwel alle lifters hebben met enige regelmaat een deload nodig.</p>
+            <div class="centered margin-top">
+                <a href="{{  path('article_details', {'slug': 'deload' }) }}">Lees verder</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
