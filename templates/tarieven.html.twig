@@ -1,0 +1,27 @@
+{% set activePage = 'tarieven' %}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section>
+        <p>Wij willen de prijzen graag helder en eerlijk houden, daarom bieden wij de volgende opties.</p>
+        <table class="table--striped">
+            <tr>
+                <td>Eerste drie trainingen<em class="note">*</em></td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Losse training</td>
+                <td>5 Euro</td>
+            </tr>
+            <tr>
+                <td>10 ritten kaart</td>
+                <td>40 Euro</td>
+            </tr>
+            <tr>
+                <td>Maandabonnement (onbeperkt)<em class="note">**</em></td>
+                <td>30 Euro</td>
+            </tr>
+        </table>
+        <p><em class="note">*</em> Als je voor het eerst langskomt dien je dit vooraf aan te geven. Dit kan via <a href="/proeftraining">dit formulier</a> of via een bericht op <a href="http://www.facebook.com/PowerHouseMiddelburg/">Facebook</a>. De drie gratis trainingen gelden voor drie opeenvolgende weken.</p>
+        <p><em class="note">**</em> Voor een maandabonnement geldt een opzegtermijn van één maand.</p>
+    </section>
+{% endblock %}
