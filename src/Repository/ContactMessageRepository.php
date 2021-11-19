@@ -19,7 +19,7 @@ class ContactMessageRepository extends ServiceEntityRepository
         parent::__construct($registry, ContactMessage::class);
     }
 
-    public function save(ContactMessage $entity)
+    public function save(ContactMessage $entity): void
     {
         $this->_em->persist($entity);
         $this->_em->flush();

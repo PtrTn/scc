@@ -19,7 +19,7 @@ class ParticipationRequestRepository extends ServiceEntityRepository
         parent::__construct($registry, ParticipationRequest::class);
     }
 
-    public function save(ParticipationRequest $entity)
+    public function save(ParticipationRequest $entity): void
     {
         $this->_em->persist($entity);
         $this->_em->flush();

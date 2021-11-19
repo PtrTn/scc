@@ -14,8 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class ContactController extends AbstractController
 {
-    /** @var ContactMessageRepository */
-    private $repository;
+    private ContactMessageRepository $repository;
 
     public function __construct(ContactMessageRepository $repository)
     {

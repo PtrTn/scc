@@ -14,8 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class CoachingController extends AbstractController
 {
-    /** @var CoachingRequestRepository */
-    private $repository;
+    private CoachingRequestRepository $repository;
 
     public function __construct(CoachingRequestRepository $repository)
     {

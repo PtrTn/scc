@@ -19,7 +19,7 @@ class CoachingRequestRepository extends ServiceEntityRepository
         parent::__construct($registry, CoachingRequest::class);
     }
 
-    public function save(CoachingRequest $entity)
+    public function save(CoachingRequest $entity): void
     {
         $this->_em->persist($entity);
         $this->_em->flush();

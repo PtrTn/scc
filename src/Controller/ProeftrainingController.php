@@ -14,8 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class ProeftrainingController extends AbstractController
 {
-    /** @var ParticipationRequestRepository */
-    private $repository;
+    private ParticipationRequestRepository $repository;
 
     public function __construct(ParticipationRequestRepository $repository)
     {

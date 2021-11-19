@@ -6,11 +6,12 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 final class ArtikelenController extends AbstractController
 {
-    private $blogPosts = [
+    private array $blogPosts = [
         'high-bar-vs-low-bar-squat' => 'high-bar-low-bar.html.twig',
         'de-halter' => 'halters.html.twig',
         'programming-voor-powerlifting' => 'programming.html.twig',
@@ -20,7 +21,7 @@ final class ArtikelenController extends AbstractController
     /**
      * @Route("/artikelen")
      */
-    public function articleListAction(Request $request)
+    public function articleListAction(Request $request): Response
     {
         return $this->render('artikelen/list.html.twig');
     }
@@ -28,7 +29,7 @@ final class ArtikelenController extends AbstractController
     /**
      * @Route("/artikelen/{slug}", name="article_details")
      */
-    public function articlePostAction(Request $request, string $slug)
+    public function articlePostAction(Request $request, string $slug): Response
     {
         $blogPost = $this->blogPosts[$slug] ?? null;
 

@@ -2,7 +2,7 @@
 This project contains the code for the website for SCC powerhouse, a strength oriented gym in Zeeland (Netherlands).
 
 # Requirements
-- PHP 7.2
+- PHP 7.4
 - Node 14.18.1
 - Npm 6.14.15
 - Yarn 1.22.5
