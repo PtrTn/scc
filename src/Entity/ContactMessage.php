@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ContactMessageRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ContactMessageRepository::class)
