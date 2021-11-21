@@ -31,5 +31,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Contact berichten', 'fas fa-list', ContactMessage::class);
         yield MenuItem::linkToCrud('Proeftrainingen', 'fas fa-list', ParticipationRequest::class);
         yield MenuItem::linkToCrud('Coaching verzoeken', 'fas fa-list', CoachingRequest::class);
+        yield MenuItem::linkToLogout('Logout', 'fa fa-sign-out');
     }
 }
