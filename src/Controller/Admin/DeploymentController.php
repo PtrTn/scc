@@ -57,7 +57,7 @@ class DeploymentController extends AbstractController
         try {
             $this->filesystem->rename(self::VENDOR_DIRECTORY, self::VENDOR_DIRECTORY . '_old');
             $this->filesystem->rename(self::TEMP_VENDOR_DIRECTORY, self::VENDOR_DIRECTORY);
-//            $this->filesystem->remove(self::VENDOR_DIRECTORY . '_old');
+            $this->filesystem->remove(self::VENDOR_DIRECTORY . '_old');
         } catch (IOException $exception) {
             $this->logger->error('Unable switch temporary vendor directory', ['exception' => $exception]);
 
