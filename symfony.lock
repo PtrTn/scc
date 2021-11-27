@@ -106,6 +106,9 @@
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
+    "nelexa/zip": {
+        "version": "4.0.0"
+    },
     "nikic/php-parser": {
         "version": "v4.13.0"
     },
@@ -167,6 +170,9 @@
     },
     "psr/event-dispatcher": {
         "version": "1.0.0"
+    },
+    "psr/http-message": {
+        "version": "1.0.1"
     },
     "psr/link": {
         "version": "1.0.0"
