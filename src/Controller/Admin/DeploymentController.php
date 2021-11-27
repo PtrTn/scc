@@ -16,6 +16,7 @@ class DeploymentController extends AbstractController
     private const CACHE_DIRECTORY = __DIR__ . '/../../../var/cache/prod';
     private const ZIPPED_VENDOR_FILEPATH = __DIR__.'/../../../deploy/vendor.zip';
     private const TEMP_VENDOR_DIRECTORY = __DIR__.'/../../../vendor_tmp';
+    private const VENDOR_DIRECTORY = __DIR__.'/../../../vendor';
 
     private LoggerInterface $logger;
     private Filesystem $filesystem;
@@ -26,8 +27,8 @@ class DeploymentController extends AbstractController
         $this->filesystem = $filesystem;
     }
 
-    #[Route('/admin/deploy')]
-    public function deploy(): Response
+    #[Route('/admin/deploy-vendor')]
+    public function deployVendor(): Response
     {
         try {
             $this->filesystem->remove(self::TEMP_VENDOR_DIRECTORY);
@@ -53,7 +54,17 @@ class DeploymentController extends AbstractController
             $zipFile->close();
         }
 
-        return $this->json('Successfully unzipped vendor');
+        try {
+            $this->filesystem->rename(self::VENDOR_DIRECTORY, self::VENDOR_DIRECTORY . '_old');
+            $this->filesystem->rename(self::TEMP_VENDOR_DIRECTORY, self::VENDOR_DIRECTORY);
+//            $this->filesystem->remove(self::VENDOR_DIRECTORY . '_old');
+        } catch (IOException $exception) {
+            $this->logger->error('Unable switch temporary vendor directory', ['exception' => $exception]);
+
+            return $this->json('Failed to switch temporary vendor directory', Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        return $this->json('Successfully deployed vendor');
     }
 
     #[Route('/admin/clear-cache')]
