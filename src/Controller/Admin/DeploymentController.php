@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DeploymentController extends AbstractController
 {
+    private const CACHE_DIRECTORY = __DIR__ . '/../../../var/cache/prod';
     private const ZIPPED_VENDOR_FILEPATH = __DIR__.'/../../../deploy/vendor.zip';
     private const TEMP_VENDOR_DIRECTORY = __DIR__.'/../../../vendor_tmp';
 
@@ -29,6 +30,7 @@ class DeploymentController extends AbstractController
     public function index(): Response
     {
         try {
+            $this->filesystem->remove(self::CACHE_DIRECTORY);
             $this->filesystem->remove(self::TEMP_VENDOR_DIRECTORY);
             $this->filesystem->mkdir(self::TEMP_VENDOR_DIRECTORY);
         } catch (IOException $exception) {
