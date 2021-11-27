@@ -27,10 +27,9 @@ class DeploymentController extends AbstractController
     }
 
     #[Route('/admin/deploy')]
-    public function index(): Response
+    public function deploy(): Response
     {
         try {
-            $this->filesystem->remove(self::CACHE_DIRECTORY);
             $this->filesystem->remove(self::TEMP_VENDOR_DIRECTORY);
             $this->filesystem->mkdir(self::TEMP_VENDOR_DIRECTORY);
         } catch (IOException $exception) {
@@ -55,5 +54,19 @@ class DeploymentController extends AbstractController
         }
 
         return $this->json('Successfully unzipped vendor');
+    }
+
+    #[Route('/admin/clear-cache')]
+    public function clearCache(): Response
+    {
+        try {
+            $this->filesystem->remove(self::CACHE_DIRECTORY);
+        } catch (IOException $exception) {
+            $this->logger->error('Unable to remove cache directory', ['exception' => $exception]);
+
+            return $this->json('Failed to clear cache', Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        return $this->json('Successfully removed cache');
     }
 }
