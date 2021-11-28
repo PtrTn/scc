@@ -3,7 +3,7 @@
     "description": "Website for the powerlifting club",
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "rc",
+    "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
         "php": ">=8.0",
