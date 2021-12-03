@@ -8,7 +8,7 @@ use Generator;
 use Symfony\Component\Panther\Client;
 use Symfony\Component\Panther\PantherTestCase;
 
-final class ScreenshotGenerator extends PantherTestCase
+final class PageLoaderTest extends PantherTestCase
 {
     private Client $client;
 
