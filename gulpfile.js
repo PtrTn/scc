@@ -5,6 +5,7 @@ var merge = require('merge-stream');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
+var imagemin = require('gulp-imagemin');
 
 /*
  * Define our tasks using plain functions
@@ -34,7 +35,6 @@ function scripts() {
         .pipe(notify({message: 'Scripts task complete'}));
 }
 
-
 function vendor() {
     var vendorFiles = [
         'node_modules/jquery/dist/jquery.js',
@@ -51,6 +51,12 @@ function vendor() {
         .pipe(gulp.dest(vendorDir));
 }
 
+function optimizeImages() {
+    return gulp .src("./assets/images/**/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("./public/assets/images"));
+}
+
 function watch() {
     gulp.watch([
         'assets/scss/**/*.scss',
@@ -64,7 +70,7 @@ function watch() {
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.series(gulp.parallel(styles, scripts, vendor));
+var build = gulp.series(gulp.parallel(styles, scripts, vendor, optimizeImages));
 
 /*
  * You can use CommonJS `exports` module notation to declare tasks
@@ -72,6 +78,7 @@ var build = gulp.series(gulp.parallel(styles, scripts, vendor));
 exports.styles = styles;
 exports.scripts = scripts;
 exports.vendor = vendor;
+exports.optimizeImages = optimizeImages;
 exports.watch = watch;
 exports.build = build;
 /*
